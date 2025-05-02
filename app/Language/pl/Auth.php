@@ -1,0 +1,36 @@
+<?php
+
+return [
+    'Back_to_login_page' => 'Wróć do strony logowania',
+    'Confirm_password' => 'Potwierdź hasło',
+    'Create_new_account' => 'Utwórz nowe konto',
+    'Email' => 'Email',
+    'First_name' => 'Imię',
+    'Forgot_your_password' => 'Nie pamiętasz hasła',
+    'I_agree_to_the_terms' => 'Akceptuję <a href="{0}" title="Regulamin" target="_balnk">regulamin</a>.',
+    'Last_name' => 'Nazwisko',
+    'Login_page' => 'Strona logowania',
+    'Login' => 'Zaloguj',
+    'New_password' => 'Nowe hasło',
+    'Password_reset' => 'Resetowanie hasła',
+    'Password' => 'Hasło',
+    'Register' => 'Zarejestruj się',
+    'Remember_me' => 'Zapamiętaj mnie',
+    'Save' => 'Zapisz',
+    'Send' => 'Wyślij',
+    'alert' => [
+        'incorrect_login' => 'Login lub hasło są niepoprawne!',
+        'reset_email_send' => 'Na podany adres email wyślemy link do resetowania hasła.',
+        'password_changed' => 'Hasło zostało zmienione! Możesz się zalogować.',
+        'registered_successfully' => 'Twoje konto zostało pomyślnie utworzone.<br> Wysłaliśmy Ci wiadomość e-mail z potwierdzeniem.',
+        'some_error' => 'Wystąpił nieoczekiwany błąd!',
+        'activated_successfull' => 'Twoje konto zostało pomyślnie aktywowane.<br> Wysłaliśmy Ci wiadomość e-mail z potwierdzeniem.',
+        'account_not_activated' => 'Konto jest nie aktywne lub zablokowane.',
+    ],
+    'msg' => [
+        'forgot_password' => 'Wyślij prośbę o reset hasła.',
+        'login_in_to_application' => 'Zaloguj się do aplikacji',
+        'register_new_account' => 'Zarejestruj nowe konto.',
+        'reset_password' => 'Ustaw nowe hasło do swojego konta.',
+    ],
+];

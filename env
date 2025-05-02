@@ -1,0 +1,12 @@
+#--------------------------------------------------------------------
+# EMAIL
+#--------------------------------------------------------------------
+
+email.fromEmail = "no-reply@yourdomain.com"
+email.fromName = "Your App"
+email.protocol = smtp
+email.SMTPHost = 127.0.0.1
+email.SMTPPort = 25
+email.SMTPCrypto = ''
+email.SMTPTimeout = 30
+email.mailType = html
