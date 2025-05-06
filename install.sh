@@ -13,6 +13,7 @@ echo "Instaluję MyAuth do projektu w: $CI4_PATH"
 echo "📂 Kopiuję pliki konfiguracyjne i przykładowe..."
 cp -r app/Config/* "$CI4_PATH/app/Config/"
 cp -r app/Controllers/* "$CI4_PATH/app/Controllers/"
+rm $CI4_PATH/app/Database/Migrations/*_CreateUsersTable.php
 cp -r app/Database/* "$CI4_PATH/app/Database/"
 cp -r app/Filters/* "$CI4_PATH/app/Filters/"
 cp -r app/Language/pl/* "$CI4_PATH/app/Language/pl/"
@@ -31,3 +32,17 @@ echo "GIT Commit"
 git add . && git commit -m "MyAuth installed"
 
 echo "Dodaj sekcję EMAIL do .env"
+cat << EOF
+
+# EMAIL
+#--------------------------------------------------------------------
+
+email.fromEmail = "no-reply@yourdomain.com"
+email.fromName = "Your App"
+email.protocol = smtp
+email.SMTPHost = 127.0.0.1
+email.SMTPPort = 25
+email.SMTPCrypto = ''
+email.SMTPTimeout = 30
+email.mailType = html
+EOF

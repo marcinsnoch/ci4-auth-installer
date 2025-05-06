@@ -13,7 +13,7 @@ class AuthController extends BaseController
     public function login()
     {
         if ($this->checkRememberMe()) {
-            return redirect()->to('home');
+            return redirect()->to('/');
         }
 
         if ($this->isFormSubmitted('login') && $this->validate('login')) {
@@ -26,7 +26,7 @@ class AuthController extends BaseController
 
             $this->rememberMe($user->id);
             $this->setUserSession($user);
-            return redirect()->to('home')->withInput();
+            return redirect()->to('/')->withInput();
         }
 
         $this->twig->display('auth/login');

@@ -37,6 +37,7 @@ class Validation extends BaseConfig
         'list'   => 'CodeIgniter\Validation\Views\list',
         'single' => 'CodeIgniter\Validation\Views\single',
     ];
+
     // --------------------------------------------------------------------
     // Rules
     // --------------------------------------------------------------------
@@ -86,6 +87,43 @@ class Validation extends BaseConfig
         'confirm_password' => [
             'label' => 'Auth.Confirm_password',
             'rules' => 'required|matches[new_password]',
+        ],
+    ];
+
+    public array $update_profile = [
+        'first_name' => [
+            'label' => 'UserProfile.First_name',
+            'rules' => 'required|min_length[3]|max_length[20]',
+        ],
+        'last_name' => [
+            'label' => 'UserProfile.Last_name',
+            'rules' => 'required|min_length[3]|max_length[20]',
+        ],
+    ];
+
+    public array $update_password = [
+        'password' => [
+            'label' => 'UserProfile.Password',
+            'rules' => 'required|min_length[8]|max_length[255]',
+        ],
+        'confirm_password' => [
+            'label' => 'UserProfile.Confirm_password',
+            'rules' => 'required|matches[password]',
+        ],
+    ];
+
+    public array $product = [
+        'name' => [
+            'label' => 'Product.Name',
+            'rules' => 'required|min_length[1]|max_length[255]',
+        ],
+        'price' => [
+            'label' => 'Product.Price',
+            'rules' => 'required|decimal',
+        ],
+        'description' => [
+            'label' => 'Product.Description',
+            'rules' => 'permit_empty|min_length[1]|max_length[255]',
         ],
     ];
 }
